@@ -1,0 +1,121 @@
+/*
+  Project name(项目名称)：CSS_outline 
+  File name(文件名): t
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/1/29 
+  Time(创建时间)： 20:48
+  Version(版本): 1.0
+  Description(描述)：
+  轮廓（outline）是绘制于元素周围的一条线，位于边框的外围（紧贴着边框），主要用来突出显示某个元素
+  轮廓和边框看起来非常相似，但它们之间也并非没有区别，例如：
+元素上下左右四个方向上边框的样式、宽度、颜色可以单独设置，而轮廓在元素四个方向的宽度、样式、颜色都是相同的，不能单独设置；
+边框的宽度会直接影响元素的尺寸，而轮廓不会占用页面空间，不会影响页面的布局，但是轮廓会与页面上的其它元素发声重叠；
+除了会与周围的元素发声重叠外，轮廓对周围的元素没有任何影响；
+边框是元素尺寸的一部分，而轮廓不是，也就是说无论轮廓的宽度是多少，元素的尺寸都不会改变；
+轮廓可以不是矩形的，但您不能直接创建圆形轮廓。
+outline-color：设置轮廓的颜色；
+outline-style：设置轮廓的样式；
+outline-width：设置轮廓的宽度；
+outline：轮廓的简写属性，可以使用 outline 属性中同时设置上面的三个轮廓属性；
+outline-offset：设置轮廓与边框之间的距离。
+1. outline-style
+outline-style 属性可以设置轮廓得样式，属性得可选值如下所示：
+值	    描述
+none	默认值，没有轮廓
+dotted	定义点状的轮廓
+dashed	定义虚线轮廓
+solid	定义实线轮廓
+double	定义双实线轮廓，两条实线之间的宽度等同于 outline-width 的值
+groove	定义 3D 凹槽轮廓，具体效果取决于 outline-color 的值
+ridge	定义 3D 凸槽轮廓，具体效果取决于 outline-color 的值
+inset	定义 3D 凹边轮廓，具体效果取决于 outline-color 的值
+outset	定义 3D 凸边轮廓，具体效果取决于 outline-color 的值
+inherit	从父元素继承轮廓样式的设置
+
+
+2. outline-width
+outline-width 属性用来设置轮廓的宽度，只有当 outline-style 属性的值不为 none 时，outline-width 属性才会生效。outline-width 属性的可选值如下：
+值	    描述
+thin	设置较细的轮廓
+medium	默认值，设置中等宽度的轮廓
+thick	设置较粗的轮廓
+length	使用具体数值加单位（px、em、cm 等）的形式设置轮廓的宽度
+inherit	从父元素继承轮廓的宽度
+
+
+3. outline-color
+outline-color 属性用来设置轮廓的颜色，属性的可选值如下：
+值	    描述
+color	指定轮廓颜色，与使用 color、border-color 等属性设置颜色相同，您可以使用颜色名称、十六进制码和 RGB 值等形式定义具体颜色
+invert	使用背景色的反色来设置轮廓的颜色，仅在 IE 和 Opera 浏览器下有效
+inherit	从父元素继承轮廓颜色的设置
+
+
+4. outline
+outline 属性是上述 outline-width、outline-style、outline-color 三个属性的简写形式，使用 outline 属性可以同时设置这三个属性中的一个或多个，语法格式如下：
+outline: outline-width outline-style outline-color;
+在使用 outline 属性时，outline-width、outline-style、outline-color 这几个参数的顺序并不是固定的，您可以按照上面语法中介绍的顺序，也可以根据自己的喜好改变它们的顺序。
+
+
+5. outline-offset
+默认情况下轮廓是紧贴着边框的，通过 outline-offset 属性可以设置轮廓与边框之间的距离，属性的可选值如下：
+值	    描述
+length	使用具体数值加单位的形式设置轮廓与边框之间的距离，可以为负值
+inherit	从父元素继承 outline-offset 属性的值
+ */
+
+
+span {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    /*为了能更直观的看出轮廓的效果，这里提前设置了轮廓的宽度和颜色*/
+    outline-width: 8px;
+    outline-color: #AAAAAA;
+}
+
+.dotted {
+    outline-style: dotted;
+}
+
+.dashed {
+    outline-style: dashed;
+}
+
+.solid {
+    outline-style: solid;
+}
+
+.double {
+    outline-style: double;
+}
+
+.groove {
+    outline-style: groove;
+}
+
+.ridge {
+    outline-style: ridge;
+}
+
+.inset {
+    outline-style: inset;
+}
+
+.outset {
+    outline-style: outset;
+}
+
+
+div {
+    width: 300px;
+    height: 150px;
+    outline-style: solid;
+    outline-width: 5px;
+}
